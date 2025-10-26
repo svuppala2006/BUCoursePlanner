@@ -1,0 +1,401 @@
+{
+    "degree": "BA in Computer Science",
+    "college": "College of Arts & Sciences",
+    "total_credits": 132,
+    "total_courses": 33,
+    "disclaimer": "This information is for informational purposes only and should be verified with official BU sources.",
+    "note": "Courses marked with is_major_requirement=true count toward the 15 required CS major courses. Additional courses fulfill CAS general education (BU Hub), language requirement, and elective requirements.",
+    "schedule": [
+        {
+            "year": 1,
+            "semester": "Fall",
+            "courses": [
+                {
+                    "courseID": "CAS CS 111",
+                    "name": "Introduction to Computer Science 1",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Quantitative Reasoning II",
+                        "Creativity/Innovation",
+                        "Critical Thinking"
+                    ],
+                    "is_major_requirement": true,
+                    "major_group": "Group A - Required"
+                },
+                {
+                    "courseID": "CAS MA 123",
+                    "name": "Calculus I",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Quantitative Reasoning I"
+                    ],
+                    "is_major_requirement": false,
+                    "notes": "Related requirement for CS major"
+                },
+                {
+                    "courseID": "CAS WR 120",
+                    "name": "Writing Seminar",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "First-Year Writing Seminar"
+                    ],
+                    "is_major_requirement": false,
+                    "notes": "Required for all CAS students"
+                },
+                {
+                    "courseID": "BU HUB Elective",
+                    "name": "Philosophical/Aesthetic/Historical Interpretation",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Philosophical Inquiry and Life's Meanings OR Aesthetic Exploration OR Historical Consciousness"
+                    ],
+                    "is_major_requirement": false,
+                    "notes": "Choose from available Hub courses"
+                }
+            ],
+            "semester_credits": 16
+        },
+        {
+            "year": 1,
+            "semester": "Spring",
+            "courses": [
+                {
+                    "courseID": "CAS CS 112",
+                    "name": "Introduction to Computer Science 2",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Quantitative Reasoning II",
+                        "Creativity/Innovation",
+                        "Critical Thinking"
+                    ],
+                    "is_major_requirement": true,
+                    "major_group": "Group A - Required"
+                },
+                {
+                    "courseID": "CAS MA 124",
+                    "name": "Calculus II",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Quantitative Reasoning II"
+                    ],
+                    "is_major_requirement": false,
+                    "notes": "Related requirement for CS major"
+                },
+                {
+                    "courseID": "CAS WR 151/152/153",
+                    "name": "Writing, Research, and Inquiry Seminar",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Writing, Research, and Inquiry"
+                    ],
+                    "is_major_requirement": false,
+                    "notes": "Required for all CAS students"
+                },
+                {
+                    "courseID": "BU HUB Elective",
+                    "name": "Scientific or Social Inquiry",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Scientific Inquiry I OR Social Inquiry I"
+                    ],
+                    "is_major_requirement": false,
+                    "notes": "Choose from available Hub courses"
+                }
+            ],
+            "semester_credits": 16
+        },
+        {
+            "year": 2,
+            "semester": "Fall",
+            "courses": [
+                {
+                    "courseID": "CAS CS 131",
+                    "name": "Combinatoric Structures",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Quantitative Reasoning II",
+                        "Critical Thinking"
+                    ],
+                    "is_major_requirement": true,
+                    "major_group": "Group A - Required"
+                },
+                {
+                    "courseID": "CAS PY 105",
+                    "name": "Physics I",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Scientific Inquiry I"
+                    ],
+                    "is_major_requirement": false,
+                    "notes": "Recommended background for CS"
+                },
+                {
+                    "courseID": "BU HUB Elective",
+                    "name": "Writing-Intensive Course",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Writing-Intensive"
+                    ],
+                    "is_major_requirement": false,
+                    "notes": "Choose from available Hub courses"
+                },
+                {
+                    "courseID": "Language Requirement",
+                    "name": "Foreign Language - Intermediate Level (or upper level)",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Global Citizenship and Intercultural Literacy (potential)"
+                    ],
+                    "is_major_requirement": false,
+                    "notes": "Required for all CAS BA students - through intermediate (4th term) level"
+                }
+            ],
+            "semester_credits": 16
+        },
+        {
+            "year": 2,
+            "semester": "Spring",
+            "courses": [
+                {
+                    "courseID": "CAS CS 210",
+                    "name": "Computer Systems",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Quantitative Reasoning II"
+                    ],
+                    "is_major_requirement": true,
+                    "major_group": "Group A - Required"
+                },
+                {
+                    "courseID": "CAS PY 106",
+                    "name": "Physics II",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Scientific Inquiry II"
+                    ],
+                    "is_major_requirement": false,
+                    "notes": "Recommended background for CS"
+                },
+                {
+                    "courseID": "BU HUB Elective",
+                    "name": "Social Inquiry or Diversity/Civic Engagement",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Social Inquiry II OR Individual in Community OR Ethical Reasoning"
+                    ],
+                    "is_major_requirement": false,
+                    "notes": "Choose from available Hub courses"
+                },
+                {
+                    "courseID": "Language Requirement (continued)",
+                    "name": "Foreign Language - Intermediate Level (continued)",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": false,
+                    "notes": "Continuation of language requirement"
+                }
+            ],
+            "semester_credits": 16
+        },
+        {
+            "year": 3,
+            "semester": "Fall",
+            "courses": [
+                {
+                    "courseID": "CAS CS 132",
+                    "name": "Geometric Algorithms",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Quantitative Reasoning II",
+                        "Digital/Multimedia Expression"
+                    ],
+                    "is_major_requirement": true,
+                    "major_group": "Group B - At least 2 required"
+                },
+                {
+                    "courseID": "CAS CS 237",
+                    "name": "Probability in Computing",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Quantitative Reasoning II",
+                        "Critical Thinking"
+                    ],
+                    "is_major_requirement": true,
+                    "major_group": "Group B - At least 2 required"
+                },
+                {
+                    "courseID": "BU HUB Elective",
+                    "name": "Oral/Digital Communication or Critical Thinking",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Oral and/or Signed Communication OR Digital/Multimedia Expression OR Critical Thinking"
+                    ],
+                    "is_major_requirement": false,
+                    "notes": "Choose from available Hub courses"
+                },
+                {
+                    "courseID": "BU HUB Elective",
+                    "name": "Research & Information Literacy or Creativity",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Research and Information Literacy OR Creativity/Innovation"
+                    ],
+                    "is_major_requirement": false,
+                    "notes": "Choose from available Hub courses"
+                }
+            ],
+            "semester_credits": 16
+        },
+        {
+            "year": 3,
+            "semester": "Spring",
+            "courses": [
+                {
+                    "courseID": "CAS CS 330",
+                    "name": "Introduction to Analysis of Algorithms",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Quantitative Reasoning II",
+                        "Critical Thinking"
+                    ],
+                    "is_major_requirement": true,
+                    "major_group": "Group A - Required"
+                },
+                {
+                    "courseID": "CAS CS 320",
+                    "name": "Concepts of Programming Languages",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Creativity/Innovation"
+                    ],
+                    "is_major_requirement": true,
+                    "major_group": "Group C - At least 2 required (MUST be at BU)"
+                },
+                {
+                    "courseID": "BU HUB Elective",
+                    "name": "Teamwork/Collaboration",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Teamwork/Collaboration"
+                    ],
+                    "is_major_requirement": false,
+                    "notes": "Choose from available Hub courses"
+                },
+                {
+                    "courseID": "Unrestricted Elective",
+                    "name": "Any course to reach degree requirements",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": false,
+                    "notes": "Choose any 4-unit course"
+                }
+            ],
+            "semester_credits": 16
+        },
+        {
+            "year": 4,
+            "semester": "Fall",
+            "courses": [
+                {
+                    "courseID": "CAS CS 411",
+                    "name": "Software Engineering",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Teamwork/Collaboration"
+                    ],
+                    "is_major_requirement": true,
+                    "major_group": "Group C - At least 2 required (MUST be at BU) - **CORE SOFTWARE ENGINEERING**"
+                },
+                {
+                    "courseID": "CAS CS 410",
+                    "name": "Advanced Software Systems",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": true,
+                    "major_group": "Group D - Elective (3+ required)"
+                },
+                {
+                    "courseID": "CAS CS 460",
+                    "name": "Introduction to Database Systems",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": true,
+                    "major_group": "Group D - Elective (3+ required)"
+                },
+                {
+                    "courseID": "BU HUB Elective",
+                    "name": "Global Citizenship/Intercultural Literacy",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Global Citizenship and Intercultural Literacy"
+                    ],
+                    "is_major_requirement": false,
+                    "notes": "Final Hub elective"
+                }
+            ],
+            "semester_credits": 16
+        },
+        {
+            "year": 4,
+            "semester": "Spring",
+            "courses": [
+                {
+                    "courseID": "CAS CS 412",
+                    "name": "Full-Stack Application Design and Development",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": true,
+                    "major_group": "Group D - Elective (3+ required) - **HIGHLY RELEVANT FOR SOFTWARE ENGINEERING JOBS**"
+                },
+                {
+                    "courseID": "CAS CS 455",
+                    "name": "Computer Networks",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": true,
+                    "major_group": "Group D - Elective (3+ required)"
+                },
+                {
+                    "courseID": "CAS CS Elective",
+                    "name": "Any CS course at 300+ level not already taken",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": true,
+                    "major_group": "Group D - Elective (3+ required) - Options: CS 350, CS 440, CS 491/492, or other 300+ CS courses"
+                },
+                {
+                    "courseID": "Unrestricted Elective",
+                    "name": "Any course to reach degree requirements",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": false,
+                    "notes": "Final elective to reach 128+ credits"
+                }
+            ],
+            "semester_credits": 16
+        }
+    ],
+    "summary": {
+        "total_cs_major_courses": 15,
+        "group_a_required": 5,
+        "group_b_required_minimum": 2,
+        "group_c_required_minimum": 2,
+        "group_d_electives_minimum": 3,
+        "total_bu_hub_requirements": 26,
+        "total_credits_breakdown": {
+            "cs_major": 60,
+            "related_requirements": 16,
+            "hub_requirements": 36,
+            "unrestricted_electives": 8,
+            "language_requirement": 8,
+            "total": 128
+        }
+    },
+    "important_notes": [
+        "All 15 CS major courses must be completed with a grade of C or higher",
+        "Group C courses (CS 320, CS 411, others) MUST be taken at BU - cannot be transferred",
+        "BU Hub requirements total 26 for first-year entering students",
+        "Language requirement must be completed through intermediate (4th term) level",
+        "This schedule assumes Fall/Spring only, no summer courses"
+    ]
+}

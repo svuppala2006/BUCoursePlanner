@@ -1,65 +1,183 @@
-import Image from "next/image";
+"use client";
+
+import React, { useState } from "react";
+import { Form, Input, Button, Typography, Collapse, Tabs, Card, Tag, Badge, Space } from "antd";
+
+type Course = {
+  courseID: string;
+  name: string;
+  credit_hours: number;
+  hub_credits: string[];
+  is_major_requirement: boolean;
+  major_group?: string;
+  notes?: string;
+};
+
+type Semester = {
+  year: number;
+  semester: string;
+  courses: Course[];
+  semester_credits: number;
+};
+
+type CourseData = {
+  degree: string;
+  college: string;
+  total_credits: number;
+  schedule: Semester[];
+  summary: {
+    total_cs_major_courses: number;
+    total_credits_breakdown: {
+      cs_major: number;
+      related_requirements: number;
+      hub_requirements: number;
+      total: number;
+    };
+  };
+};
+
+function CourseCard({ course }: { course: Course }) {
+  return (
+    <Card
+      size="small"
+      title={
+        <Space>
+          {course.courseID}
+          {course.is_major_requirement && (
+            <Badge status="processing" text={<Tag color="blue">Major Requirement</Tag>} />
+          )}
+        </Space>
+      }
+      style={{
+        marginBottom: 16,
+        borderLeft: course.is_major_requirement ? "4px solid #1890ff" : undefined,
+      }}
+    >
+      <Typography.Text strong>{course.name}</Typography.Text>
+      <div style={{ marginTop: 8 }}>
+        <Space wrap>
+          <Tag color="green">{course.credit_hours} credits</Tag>
+          {course.major_group && <Tag color="purple">{course.major_group}</Tag>}
+          {course.hub_credits.map((credit, index) => (
+            <Tag key={index} color="orange">{credit}</Tag>
+          ))}
+        </Space>
+      </div>
+      {course.notes && (
+        <Typography.Text type="secondary" style={{ display: "block", marginTop: 8 }}>
+          Note: {course.notes}
+        </Typography.Text>
+      )}
+    </Card>
+  );
+}
+
+function SemesterPanel({ semester }: { semester: Semester }) {
+  return (
+    <div>
+      <Typography.Title level={5} style={{ marginTop: 16 }}>
+        {semester.semester} Semester ({semester.semester_credits} credits)
+      </Typography.Title>
+      {semester.courses.map((course, index) => (
+        <CourseCard key={index} course={course} />
+      ))}
+    </div>
+  );
+}
+
+function YearPanel({ yearData }: { yearData: Semester[] }) {
+  const items = yearData.map((semester) => ({
+    key: semester.semester,
+    label: semester.semester,
+    children: <SemesterPanel semester={semester} />,
+  }));
+
+  return <Tabs items={items} />;
+}
 
 export default function Home() {
+  const [submitted, setSubmitted] = useState<null | { major: string; career: string }>(null);
+  const [courses, setCourses] = useState<CourseData | null>(null);
+
+  const onFinish = async (values: { major: string; career: string }) => {
+    try {
+      setSubmitted(values);
+      const response = await fetch('/api/courses');
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      setCourses(data);
+    } catch (error) {
+      console.error('Error fetching course data:', error);
+    }
+  };
+
+  // Group semesters by year
+  const yearGroups = courses?.schedule.reduce((groups, semester) => {
+    const year = semester.year;
+    if (!groups[year]) {
+      groups[year] = [];
+    }
+    groups[year].push(semester);
+    return groups;
+  }, {} as Record<number, Semester[]>) || {};
+
+  const yearPanels = Object.entries(yearGroups).map(([year, semesters]) => ({
+    key: year,
+    label: `Year ${year}`,
+    children: <YearPanel yearData={semesters} />,
+  }));
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <div style={{ maxWidth: 1200, margin: "40px auto", padding: "0 16px" }}>
+      <Typography.Title level={1}>Welcome to BU Course Planner!</Typography.Title>
+
+      <Form layout="vertical" onFinish={onFinish}>
+        <Form.Item
+          label="Major"
+          name="major"
+          rules={[{ required: true, message: "Please enter your major" }]}
+        >
+          <Input placeholder="Enter major here..." />
+        </Form.Item>
+
+        <Form.Item
+          label="Career"
+          name="career"
+          rules={[{ required: true, message: "Please enter your desired career" }]}
+        >
+          <Input placeholder="Enter desired career here..." />
+        </Form.Item>
+
+        <Form.Item>
+          <Button type="primary" htmlType="submit">
+            Create Plan
+          </Button>
+        </Form.Item>
+      </Form>
+
+      {submitted && courses && (
+        <div style={{ marginTop: 28 }}>
+          <Space direction="vertical" style={{ width: "100%" }}>
+            <Card>
+              <Typography.Title level={4}>Program Overview</Typography.Title>
+              <Space wrap>
+                <Tag color="blue">{courses.degree}</Tag>
+                <Tag color="cyan">{courses.college}</Tag>
+                <Tag color="green">Total Credits: {courses.total_credits}</Tag>
+                <Tag color="purple">Major Credits: {courses.summary.total_credits_breakdown.cs_major}</Tag>
+              </Space>
+            </Card>
+
+            <Collapse
+              defaultActiveKey={["1"]}
+              items={yearPanels}
+              style={{ background: "white" }}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </Space>
         </div>
-      </main>
+      )}
     </div>
   );
 }
