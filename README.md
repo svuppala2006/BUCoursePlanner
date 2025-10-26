@@ -9,6 +9,10 @@ This project takes input from the user asking for their desired major and career
 2) Run the following commands in the terminal from the root of the project to install the project dependencies
 ```console
 npm install
+python -m venv my_env  # Create a virtual environment named 'my_env'
+.\my_env\Scripts\activate
+.\my_env\Scripts\activate # Activate the virtual environment (on Windows)
+# For Linux/Mac: .\my_env\Scripts\activate
 pip install -r requirements.txt
 ```
 
