@@ -7,7 +7,7 @@ This project takes input from the user asking for their desired major and career
 1) Make sure you have Node, npm, and python all installed
 
 2) Run the following commands in the terminal from the root of the project to install the project dependencies
-```console
+```bash
 npm install
 python -m venv my_env  # Create a virtual environment named 'my_env'
 .\my_env\Scripts\activate # Activate the virtual environment (Windows)
@@ -16,17 +16,17 @@ pip install -r requirements.txt
 ```
 
 3) In the server subdirectory, create a .env.local file and add the following line using your own Google Gemini API key
-```code
+```py
 GOOGLE_API_KEY="<Insert API Key here>"
 ```
 
 4) To run the project, in one terminal, run:
-```console
+```bash
 npm run dev
 ```
 
-And in another terminal, run:
-```console
+And in another terminal, first reactivate the python environment, then run:
+```bash
 cd server
 uvicorn server:app --reload --port 8000
 ```
