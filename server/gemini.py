@@ -8,9 +8,9 @@ from dotenv import load_dotenv
 def generate_course_plan(major: str, career: str) -> Dict[str, Any]:
     try:
         csv_path = pathlib.Path("IS2.csv")
-        load_dotenv()
+        load_dotenv(dotenv_path=".env.local")
         # Initialize Gemini API
-        genai.configure(api_key=os.getenv("API_KEY"))
+        genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
         # --- 2. Upload the CSV file to the Google Files API ---
         print(f"Uploading file '{csv_path.name}'...")
