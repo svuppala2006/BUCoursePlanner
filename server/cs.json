@@ -1,1 +1,400 @@
-null
+{
+    "degree": "BA in Computer Science",
+    "college": "College of Arts & Sciences",
+    "total_credits": 128,
+    "total_courses": 32,
+    "disclaimer": "This information is for informational purposes only and should be verified with official BU sources.",
+    "note": "Courses marked with is_major_requirement=true count toward the 15 required CS major courses. Additional courses fulfill CAS general education (BU Hub), language requirement, and elective requirements.",
+    "schedule": [
+        {
+            "year": 1,
+            "semester": "Fall",
+            "courses": [
+                {
+                    "courseID": "CAS CS 111",
+                    "name": "Introduction to Computer Science 1",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Quantitative Reasoning II",
+                        "Creativity/Innovation",
+                        "Critical Thinking"
+                    ],
+                    "is_major_requirement": true,
+                    "major_group": "Core Requirement"
+                },
+                {
+                    "courseID": "CAS MA 123",
+                    "name": "Calculus I",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Quantitative Reasoning II",
+                        "Critical Thinking"
+                    ],
+                    "is_major_requirement": false,
+                    "major_group": null
+                },
+                {
+                    "courseID": "CAS WR 120",
+                    "name": "First-Year Writing Seminar",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "First-Year Writing Seminar"
+                    ],
+                    "is_major_requirement": false,
+                    "major_group": null
+                },
+                {
+                    "courseID": "CAS LF 111",
+                    "name": "First-Semester French",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": false,
+                    "major_group": null
+                }
+            ],
+            "semester_credits": 16
+        },
+        {
+            "year": 1,
+            "semester": "Spring",
+            "courses": [
+                {
+                    "courseID": "CAS CS 112",
+                    "name": "Introduction to Computer Science 2",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Quantitative Reasoning II",
+                        "Creativity/Innovation",
+                        "Critical Thinking"
+                    ],
+                    "is_major_requirement": true,
+                    "major_group": "Core Requirement"
+                },
+                {
+                    "courseID": "CAS MA 124",
+                    "name": "Calculus II",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Quantitative Reasoning II",
+                        "Scientific Inquiry II",
+                        "Critical Thinking"
+                    ],
+                    "is_major_requirement": false,
+                    "major_group": null
+                },
+                {
+                    "courseID": "CAS WR 151",
+                    "name": "Writing, Research, and Inquiry with Oral and/or Signed Expression",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Writing, Research, and Inquiry",
+                        "Oral and/or Signed Communication",
+                        "Research and Information Literacy"
+                    ],
+                    "is_major_requirement": false,
+                    "major_group": null
+                },
+                {
+                    "courseID": "CAS LF 112",
+                    "name": "Second-Semester French",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": false,
+                    "major_group": null
+                }
+            ],
+            "semester_credits": 16
+        },
+        {
+            "year": 2,
+            "semester": "Fall",
+            "courses": [
+                {
+                    "courseID": "CAS CS 131",
+                    "name": "Combinatoric Structures",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Quantitative Reasoning II",
+                        "Critical Thinking"
+                    ],
+                    "is_major_requirement": true,
+                    "major_group": "Core Requirement"
+                },
+                {
+                    "courseID": "CAS CS 210",
+                    "name": "Computer Systems",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": true,
+                    "major_group": "Core Requirement"
+                },
+                {
+                    "courseID": "CAS LF 211",
+                    "name": "Third-Semester French",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": false,
+                    "major_group": null
+                },
+                {
+                    "courseID": "CAS PH 150",
+                    "name": "Introduction to Ethics",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Philosophical Inquiry and Life's Meanings",
+                        "Ethical Reasoning",
+                        "Critical Thinking"
+                    ],
+                    "is_major_requirement": false,
+                    "major_group": null
+                }
+            ],
+            "semester_credits": 16
+        },
+        {
+            "year": 2,
+            "semester": "Spring",
+            "courses": [
+                {
+                    "courseID": "CAS CS 237",
+                    "name": "Probability in Computing",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Quantitative Reasoning II",
+                        "Critical Thinking"
+                    ],
+                    "is_major_requirement": true,
+                    "major_group": "Core Requirement"
+                },
+                {
+                    "courseID": "CAS CS 330",
+                    "name": "Introduction to Analysis of Algorithms",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Quantitative Reasoning II",
+                        "Critical Thinking"
+                    ],
+                    "is_major_requirement": true,
+                    "major_group": "Core Requirement"
+                },
+                {
+                    "courseID": "CAS LF 212",
+                    "name": "Fourth-Semester French",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "The Individual in Community",
+                        "Global Citizenship and Intercultural Literacy"
+                    ],
+                    "is_major_requirement": false,
+                    "major_group": null
+                },
+                {
+                    "courseID": "CAS AN 101",
+                    "name": "Introduction to Sociocultural Anthropology",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Social Inquiry I",
+                        "Global Citizenship and Intercultural Literacy",
+                        "Research and Information Literacy"
+                    ],
+                    "is_major_requirement": false,
+                    "major_group": null
+                }
+            ],
+            "semester_credits": 16
+        },
+        {
+            "year": 3,
+            "semester": "Fall",
+            "courses": [
+                {
+                    "courseID": "CAS CS 320",
+                    "name": "Concepts of Programming Languages",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": true,
+                    "major_group": "Core Requirement"
+                },
+                {
+                    "courseID": "CAS CS 350",
+                    "name": "Fundamentals of Computing Systems",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": true,
+                    "major_group": "Core Requirement"
+                },
+                {
+                    "courseID": "CAS MA 242",
+                    "name": "Linear Algebra",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Quantitative Reasoning II",
+                        "Critical Thinking"
+                    ],
+                    "is_major_requirement": false,
+                    "major_group": null
+                },
+                {
+                    "courseID": "CAS CI 200",
+                    "name": "Introduction to Film & Media Aesthetics",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Digital/Multimedia Expression",
+                        "Aesthetic Exploration",
+                        "Critical Thinking"
+                    ],
+                    "is_major_requirement": false,
+                    "major_group": null
+                }
+            ],
+            "semester_credits": 16
+        },
+        {
+            "year": 3,
+            "semester": "Spring",
+            "courses": [
+                {
+                    "courseID": "CAS CS 332",
+                    "name": "Elements of the Theory of Computation",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": true,
+                    "major_group": "Core Requirement"
+                },
+                {
+                    "courseID": "CAS CS 411",
+                    "name": "Software Engineering",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": true,
+                    "major_group": "Software Engineering Elective"
+                },
+                {
+                    "courseID": "CAS CS 460",
+                    "name": "Introduction to Database Systems",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": true,
+                    "major_group": "Software Engineering Elective"
+                },
+                {
+                    "courseID": "CAS HI 176",
+                    "name": "World History 1500-Present",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Historical Consciousness",
+                        "Global Citizenship and Intercultural Literacy"
+                    ],
+                    "is_major_requirement": false,
+                    "major_group": null
+                }
+            ],
+            "semester_credits": 16
+        },
+        {
+            "year": 4,
+            "semester": "Fall",
+            "courses": [
+                {
+                    "courseID": "CAS CS 455",
+                    "name": "Computer Networks",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": true,
+                    "major_group": "Software Engineering Elective"
+                },
+                {
+                    "courseID": "CAS CS 440",
+                    "name": "Introduction to Artificial Intelligence",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": true,
+                    "major_group": "Software Engineering Elective"
+                },
+                {
+                    "courseID": "CAS AA 313",
+                    "name": "The Politics and Policy of HBO's The Wire",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Social Inquiry II",
+                        "Ethical Reasoning",
+                        "Teamwork/Collaboration"
+                    ],
+                    "is_major_requirement": false,
+                    "major_group": null
+                },
+                {
+                    "courseID": "CAS AH 111",
+                    "name": "Pyramids to Cathedrals: An Introduction to Ancient and Medieval Art",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Aesthetic Exploration",
+                        "Historical Consciousness",
+                        "Creativity/Innovation"
+                    ],
+                    "is_major_requirement": false,
+                    "major_group": null
+                }
+            ],
+            "semester_credits": 16
+        },
+        {
+            "year": 4,
+            "semester": "Spring",
+            "courses": [
+                {
+                    "courseID": "CAS CS 410",
+                    "name": "Advanced Software Systems",
+                    "credit_hours": 4,
+                    "hub_credits": [],
+                    "is_major_requirement": true,
+                    "major_group": "Software Engineering Elective"
+                },
+                {
+                    "courseID": "CAS EE 100",
+                    "name": "Environmental Change and Sustainability",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Ethical Reasoning",
+                        "Social Inquiry I",
+                        "Teamwork/Collaboration"
+                    ],
+                    "is_major_requirement": false,
+                    "major_group": null
+                },
+                {
+                    "courseID": "CAS PS 101",
+                    "name": "General Psychology",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Social Inquiry I",
+                        "Critical Thinking"
+                    ],
+                    "is_major_requirement": false,
+                    "major_group": null
+                },
+                {
+                    "courseID": "CAS EC 101",
+                    "name": "Introductory Microeconomic Analysis",
+                    "credit_hours": 4,
+                    "hub_credits": [
+                        "Social Inquiry I",
+                        "Critical Thinking"
+                    ],
+                    "is_major_requirement": false,
+                    "major_group": null
+                }
+            ],
+            "semester_credits": 16
+        }
+    ],
+    "summary": {
+        "total_bu_hub_requirements": 26,
+        "total_credits_breakdown": {
+            "major_credits": 60,
+            "hub_requirements": 36,
+            "electives": 32,
+            "total": 128
+        }
+    }
+}

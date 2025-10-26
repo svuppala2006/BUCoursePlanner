@@ -9,7 +9,7 @@ def generate_course_plan(major: str, career: str) -> Dict[str, Any]:
         csv_path = pathlib.Path("IS2.csv")
         
         # Initialize Gemini API
-        genai.configure(api_key='AIzaSyBRI0YMwGPOgzqqJCttsM0EMWr9SQbEou0')
+        genai.configure(api_key='AIzaSyA1PsU1haI-A3QLzF8YT3WppKnBWDQaRO0')
 
         # --- 2. Upload the CSV file to the Google Files API ---
         print(f"Uploading file '{csv_path.name}'...")
@@ -88,8 +88,8 @@ Important:
         })
         
         print("\n--- Gemini Response ---")
-        print(response.text)
         print("-----------------------")
+        return json.loads(response.text)
 
     except Exception as e:
         print(f"\nAn error occurred: {e}")
