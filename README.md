@@ -12,7 +12,12 @@ npm install
 pip install -r requirements.txt
 ```
 
-3) To run the project, in one terminal, run:
+3) In the server subdirectory, create a .env.local file and add the following line using your own Google Gemini API key
+```code
+API_KEY="<Insert API Key here>"
+```
+
+4) To run the project, in one terminal, run:
 ```console
 npm run dev
 ```
