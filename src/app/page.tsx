@@ -99,17 +99,36 @@ export default function Home() {
   const [submitted, setSubmitted] = useState<null | { major: string; career: string }>(null);
   const [courses, setCourses] = useState<CourseData | null>(null);
 
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
   const onFinish = async (values: { major: string; career: string }) => {
     try {
+      setLoading(true);
+      setError(null);
       setSubmitted(values);
-      const response = await fetch('/api/courses');
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      
+      // First, generate the course plan
+      const generateResponse = await fetch('/api/courses', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!generateResponse.ok) {
+        throw new Error(`HTTP error! status: ${generateResponse.status}`);
       }
-      const data = await response.json();
+
+      // Get the generated plan
+      const data = await generateResponse.json();
       setCourses(data);
     } catch (error) {
-      console.error('Error fetching course data:', error);
+      console.error('Error generating/fetching course data:', error);
+      setError('Failed to generate course plan. Please try again.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -151,9 +170,14 @@ export default function Home() {
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit">
-            Create Plan
+          <Button type="primary" htmlType="submit" loading={loading}>
+            {loading ? 'Generating Plan...' : 'Create Plan'}
           </Button>
+          {error && (
+            <Typography.Text type="danger" style={{ marginTop: 8, display: 'block' }}>
+              {error}
+            </Typography.Text>
+          )}
         </Form.Item>
       </Form>
 
